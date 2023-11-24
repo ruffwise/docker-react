@@ -10,14 +10,14 @@ before_install:
 script:
   - docker run -e CI=true ruffwise/docker-react npm run test
 
-deploy:
-  provider: elasticbeanstalk
-  region: "us-east-1"
-  app: "docker-travis-beanstalk"
-  env: "docker-travis-beanstalk-env"
-  bucket_name: "elasticbeanstalk-us-east-1-169085734424"
-  bucket_path: "docker-travis-beanstalk"
-  on:
-    branch: main
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: "$AWS_SECRET_KEY"
+# deploy:
+#   provider: elasticbeanstalk
+#   region: "us-east-1"
+#   app: "docker-travis-beanstalk"
+#   env: "docker-travis-beanstalk-env"
+#   bucket_name: "elasticbeanstalk-us-east-1-169085734424"
+#   bucket_path: "docker-travis-beanstalk"
+#   on:
+#     branch: main
+#   access_key_id: $AWS_ACCESS_KEY
+#   secret_access_key: "$AWS_SECRET_KEY"
